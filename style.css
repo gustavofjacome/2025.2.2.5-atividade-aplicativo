@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0F172A; 
+    padding: 20px;
+    color: #E2E8F0; 
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1E293B; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+}
+
+h1 {
+    text-align: center;
+    color: #3e51fb; 
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #94A3B8; 
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.busca {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    background: #334155; 
+    border: 2px solid #475569; 
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #F8FAFC; 
+}
+
+input:focus {
+    outline: none;
+    border-color: #6366F1; 
+}
+
+button {
+    padding: 12px 24px;
+    background: #4F46E5; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #3225c1; 
+}
+
+.resultado {
+    background: #334155; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #475569; 
+}
+
+.resultado p {
+    margin: 8px 0;
+    color: #E2E8F0; 
+}
+
+.resultado strong {
+    color: #A5B4FC; 
+}
+
+.hidden {
+    display: none;
+}
+
+.historico {
+    border-top: 2px solid #334155;
+    padding-top: 20px;
+}
+
+.historico button {
+    background: #E11D48; 
+    margin-bottom: 15px;
+}
+
+.historico button:hover {
+    background: #BE123C;
+}
+
+.item {
+    background: #334155; 
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #4136bbd1;
+}
+
+.item p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #CBD5E1;
+}
+
+.item .cep {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.item button {
+    background: #c20101; 
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+.item button:hover {
+    background: #a80202;
+}
+
+@media (max-width: 600px) {
+    .busca {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
