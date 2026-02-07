@@ -62,3 +62,21 @@ function salvarNoHistorico(dados) {
     localStorage.setItem('historico', JSON.stringify(historico));
     mostrarHistorico();
 }
+// mostrar o historico
+function mostrarHistorico() {
+    const historico = JSON.parse(localStorage.getItem('historico')) || [];
+    
+    if (historico.length === 0) {
+        lista.innerHTML = '<p>Nenhuma consulta salva</p>';
+        return;
+    }
+    
+    lista.innerHTML = historico.map((item, index) => `
+        <div class="item">
+            <p class="cep">${item.cep}</p>
+            <p>${item.endereco}</p>
+            <p style="font-size: 0.8rem; color: #888;">${item.data}</p>
+            <button onclick="deletarItem(${index})">Deletar</button>
+        </div>
+    `).join('');
+}
