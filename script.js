@@ -80,3 +80,10 @@ function mostrarHistorico() {
         </div>
     `).join('');
 }
+// deletar itens do historico
+function deletarItem(index) {
+    let historico = JSON.parse(localStorage.getItem('historico')) || [];
+    historico.splice(index, 1);
+    localStorage.setItem('historico', JSON.stringify(historico));
+    mostrarHistorico();
+}
