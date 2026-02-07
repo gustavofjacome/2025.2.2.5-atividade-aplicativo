@@ -43,3 +43,22 @@ function mostrarResultado(dados) {
     resultado.classList.remove('hidden');
 }
 
+// Salvar no localStorage
+function salvarNoHistorico(dados) {
+    let historico = JSON.parse(localStorage.getItem('historico')) || [];
+    
+    // add novos itens no historico
+    historico.unshift({
+        cep: dados.cep,
+        endereco: `${dados.logradouro}, ${dados.bairro} - ${dados.localidade}/${dados.uf}`,
+        data: new Date().toLocaleString()
+    });
+    
+    // add limite de 10 itens 
+    if (historico.length > 10) {
+        historico = historico.slice(0, 10);
+    }
+    
+    localStorage.setItem('historico', JSON.stringify(historico));
+    mostrarHistorico();
+}
