@@ -87,3 +87,10 @@ function deletarItem(index) {
     localStorage.setItem('historico', JSON.stringify(historico));
     mostrarHistorico();
 }
+// limpar tudo do historico
+function limparHistorico() {
+    if (confirm('Deseja limpar todo o histórico?')) {
+        localStorage.removeItem('historico');
+        mostrarHistorico();
+    }
+}
