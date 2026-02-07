@@ -94,3 +94,13 @@ function limparHistorico() {
         mostrarHistorico();
     }
 }
+// eventos
+buscarBtn.addEventListener('click', buscarCEP);
+limparBtn.addEventListener('click', limparHistorico);
+
+cepInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        buscarCEP();
+    }
+});
+mostrarHistorico();
