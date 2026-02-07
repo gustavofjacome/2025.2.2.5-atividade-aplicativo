@@ -31,3 +31,15 @@ async function buscarCEP() {
     }
 }
 
+// formatando o html para mostrar os dados da api
+function mostrarResultado(dados) {
+    resultado.innerHTML = `
+        <p><strong>CEP:</strong> ${dados.cep}</p>
+        <p><strong>Rua:</strong> ${dados.logradouro || '-'}</p>
+        <p><strong>Bairro:</strong> ${dados.bairro || '-'}</p>
+        <p><strong>Cidade:</strong> ${dados.localidade}</p>
+        <p><strong>Estado:</strong> ${dados.uf}</p>
+    `;
+    resultado.classList.remove('hidden');
+}
+
